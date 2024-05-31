@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Add a new task" required>
+            <input type="date" id="task-date" required>
+            <select id="task-priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button type="submit">Add</button>
+        </form>
+        <div class="task-section">
+            <h2>Pending Tasks</h2>
+            <label for="sort-tasks">Sort by:</label>
+            <select id="sort-tasks">
+                <option value="date">Date</option>
+                <option value="priority">Priority</option>
+            </select>
+            <ul id="pending-tasks"></ul>
+        </div>        
+            <div class="task-section">
+                <h2>Completed Tasks</h2>
+                <ul id="completed-tasks"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for editing tasks -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Task</h2>
+            <form id="edit-form">
+                <input type="text" id="edit-task-input" required>
+                <input type="date" id="edit-task-date" required>
+                <select id="edit-task-priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <button type="submit">Save changes</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyright © 2024 Jonathan Peng</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
