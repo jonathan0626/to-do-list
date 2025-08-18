@@ -3,6 +3,7 @@
 ## Introduction
 
 **To-Do List** is a simple and responsive web application that helps you manage your tasks efficiently. You can add new tasks, edit or delete existing ones, mark tasks as completed, and sort tasks by date or priority. The application is built using HTML, CSS, JavaScript, and Flask.
+
 <img width="644" height="349" alt="image" src="https://github.com/user-attachments/assets/b82de4bf-21c1-4058-82c5-726185a6cd57" />
 
 
